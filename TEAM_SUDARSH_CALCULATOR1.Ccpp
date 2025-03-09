@@ -1,0 +1,80 @@
+#include <iostream>
+#include <cmath>
+
+struct Point{
+  int x;
+  int y;
+};
+
+// Function to add two objects
+template <typename T>
+T add(T a, T b) {
+  /* write your code here */
+}
+
+// Function to subtract two objects
+T subtract(T a, T b) {
+  /* write your code here */
+}
+
+
+// Function to multiply two objects
+T multiply(T a, T b) {
+  /* write your code here */
+}
+
+// Function to divide two integers (return integer)
+T divide(T a, T b) {
+  /* write your code here */
+  // if a and b is int return normal a/b no need of typecasting
+}
+
+int get_squared_distance(Point p1, Point p2){
+  // return the squared distance: (x1-x2)^2 + (y1-y2)^2  
+}
+
+int get_manhattan_distance(Point p1, Point p2){
+  // manhattan distance is |x2-x1| + |y2-y1|
+  // use abs(x) to get |x|
+    
+}
+
+bool check_same_line(Point p1, Point p2, Point p3){
+  // same line -> (y2-y1)/(x2-x1) is same as (y3-y1)/(x3-x1)
+  // to avoid floating point errors -> (y3-y1)*(x2-x1) == (y2-y1_*(x3-x1)
+  // default return false;
+  return false;  
+}
+
+int main() {
+    // Testing the functions
+    /* DO NOT CHANGE ANYTHING BELOW THIS LINE*/
+    int a_i, b_i;
+    float a_f, b_f;
+
+    std::cin >> a_i >> b_i >> a_f >> b_f;
+
+    std::cout << "Addition of integers: " << add(a_i, b_i) << std::endl;
+    std::cout << "Addition of floating-point numbers: " << add(a_f, b_f) << std::endl;
+    std::cout << "subtraction of integers: " << subtract(a_i, b_i) << std::endl;
+    std::cout << "subtraction of floating-point numbers: " << subtract(a_f, b_f) << std::endl;
+    std::cout << "multiplication of integers: " << multiply(a_i, b_i) << std::endl;
+    std::cout << "multiplication of floating-point numbers: " << multiply(a_f, b_f) << std::endl;
+    std::cout << "Integer division: " << divide(a_i, b_i) << std::endl;
+    std::cout << "Floating-point division: " << divide(a_f, b_f) << std::endl;
+  
+  	Point p1;
+  	std::cin >> p1.x >> p1.y;
+  	Point p2;
+  	std::cin >> p2.x >> p2.y;
+  	Point p3;
+  	std::cin >> p3.x >> p3.y;
+  	
+  	std::cout << "The squared distance between the points is " << get_squared_distance(p1, p2) << std::endl;
+  	std::cout << "The manhattan distance between the points is " << get_manhattan_distance(p1, p2) << std::endl;
+  	std::cout << "The lines lies on the same line: " << check_same_line(p1, p2, p3) << std::endl;
+  
+  	
+
+    return 0;
+}
